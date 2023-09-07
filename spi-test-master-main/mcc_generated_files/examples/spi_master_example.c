@@ -68,69 +68,46 @@ uint8_t tMessage = "0xA9";
 static void drive_slave_select_low(void);
 static void drive_slave_select_high(void);
 
-/**
- *  \ingroup doc_driver_spi_example
- *  \brief Put in this function the code needed to drive the slave select low
- *  
- *  \param none
- *  
- *  \return none
- */
-static void drive_slave_select_low(){
+// Abstracted function defined in the driver to start the communication with the selected slave device
+static void drive_slave_select_low()
+{
 	// Control GPIO to drive SS_bar low
-    PORTAbits.RA5 = 0;
+	PORTAbits.RA5 = 0;
 }
 
-/**
- *  \ingroup doc_driver_spi_example
- *  \brief Put in this function the code needed to drive the slave select high
- *  
- *  \param none
- *  
- *  \return none
- */
-static void drive_slave_select_high(){
+// Abstracted function defined in the driver to end the communication with the selected slave device
+static void drive_slave_select_high()
+{
 	// Control GPIO to drive SS_bar high
-    PORTAbits.RA5 = 1;
+	PORTAbits.RA5 = 1;
 }
 
-/**
- *  \ingroup doc_driver_spi_example
- *  \brief Call this function the code needed to run the SPI Master example
- *  
- *  \param none
- *  
- *  \return 1, if the program ended successfully
- */
+// First test in which one byte is exchanged
 uint8_t SPI_Master_test(void)
 {
-	// Test driver, assume that the SPI MISO and MOSI pins have been looped back
-	
+	// Test if the SPI module is already enabled	
 	if(!spi_master_open(MASTER0))
 		// Not able to open SPI, call fail() or optionally do something 
 		// else waiting for the SPI to become free
 		return 0; 
 	
     
-    
-    drive_slave_select_low();
-    
-	SPI1_ExchangeBlock(buffer, sizeof(buffer));
+    	// The slave device is selected to start the communication
+    	drive_slave_select_low();
 
-    //rMessage = SPI1_ExchangeByte(tMessage);   //An example to exchange a single byte with the slave
+
+    	rMessage = SPI1_ExchangeByte(tMessage);   //An example to exchange a single byte with the slave
+
+	//SPI1TXB = 0x33; //Se empieza la transferencia       0b01101001 
+    	//SPI1TXB = 0x55;     //recordatorio que 0xF = 0b1111 -> 0xFF = 0b11111111 
+    	//__delay_us(20);
+    	//SPI1TXB = 0xAA; //Se empieza la transferencia       0b01101001 
     
+    	drive_slave_select_high();
     
-    drive_slave_select_high();
+    	SPI1_Close();
     
-    SPI1_Close();
-    
-    buffer2[0] = buffer[0];
-	buffer2[1] = buffer[1];
-    buffer2[2] = buffer[2];
-    buffer2[3] = buffer[3];
-    
-    if(buffer2[0]==0xC8 && buffer2[1]==0xC8 && buffer2[2]==0xC8 && buffer2[2]==0xC8){
-        PORTCbits.RC2 = 1;
+   	
     }
     
 	// Check that the correct data was received
@@ -153,19 +130,24 @@ uint8_t SPI_Master_2(void)      //this function is used to read the bytes receiv
 		return 0; 
 	
 	drive_slave_select_low();
-	//SPI1_ExchangeBlock(buffer, sizeof(buffer));
-    SPI1_WriteBlock(buffer, sizeof(buffer));
+	
+	// The defined number of bytes are exchanged
+	SPI1_ExchangeBlock(buffer, sizeof(buffer));
     
-    //SPI1TXB = 0x33; //Se empieza la transferencia       0b01101001 
-    //SPI1TXB = 0x55;     //recordatorio que 0xF = 0b1111 -> 0xFF = 0b11111111 
-    //__delay_us(20);
-    //SPI1TXB = 0xAA; //Se empieza la transferencia       0b01101001 
     
-    drive_slave_select_high();
+    	drive_slave_select_high();
 
-    SPI1_Close();
+    	SPI1_Close();
+
+	buffer2[0] = buffer[0];
+	buffer2[1] = buffer[1];
+    	buffer2[2] = buffer[2];
+   	buffer2[3] = buffer[3];
     
+   	 if(buffer2[0]==0xC8 && buffer2[1]==0xC8 && buffer2[2]==0xC8 && buffer2[2]==0xC8){
+        	PORTCbits.RC2 = 1;
     
+}
 	
 	// Check that the correct data was received
 	//if (strncmp((char*)buffer, "data", strlen("data")))
