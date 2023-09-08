@@ -1,28 +1,4 @@
-
-/**
- * \file main.c
- *
- * \brief Main source file.
- *
- (c) 2020 Microchip Technology Inc. and its subsidiaries.
-    Subject to your compliance with these terms, you may use this software and
-    any derivatives exclusively with Microchip products. It is your responsibility
-    to comply with third party license terms applicable to your use of third party
-    software (including open source software) that may accompany Microchip software.
-    THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER
-    EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED
-    WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A
-    PARTICULAR PURPOSE.
-    IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE,
-    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND
-    WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS
-    BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE
-    FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
-    ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
-    THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
- *
- */
-
+//Device Configuration:
 // CONFIG1L
 #pragma config FEXTOSC = OFF    // External Oscillator Selection->Oscillator not enabled
 #pragma config RSTOSC = HFINTOSC_64MHZ    // Reset Oscillator Selection->HFINTOSC with HFFRQ = 64 MHz and CDIV = 1:1
@@ -73,6 +49,7 @@
 // CONFIG5L
 #pragma config CP = OFF    // PFM and Data EEPROM Code Protection bit->PFM and Data EEPROM code protection disabled
 
+//----------------------------------------------------------------------------------------------------------------------------------------------
 
 #include <xc.h>
 #include <stdint.h>
@@ -83,7 +60,6 @@ static void PORT_Initialize(void);
 static void SPI1_Initialize(void);
 static void INTERRUPT_Initialize(void);
 static uint8_t SPI1_exchangeByte(uint8_t data);
-//static void MSSP1_InterruptHandler(void);
 
 volatile uint8_t receiveData = 0x00;        /* Data that will be received */
 volatile uint8_t writeData = 0xC8;      /* Data that will be transmitted */
@@ -173,6 +149,8 @@ void __interrupt() INTERRUPT_InterruptManager(void)
     }
 }
 
+//-----------------------------------------------------------------------------------------------------------------------------------------
+
 int main(void)
 {
     CLK_Initialize();
@@ -183,8 +161,8 @@ int main(void)
     SPI1CON0bits.EN = 1;
     while(1)
     {
+    	// When the slave select line is held down communication can begin
         if(LATAbits.LA5 == 0){
-            //SPI1TXB = writeData;
             receiveData = SPI1_exchangeByte(writeData);
         }
         
