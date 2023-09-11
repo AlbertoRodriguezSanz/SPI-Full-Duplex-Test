@@ -83,7 +83,7 @@ static void drive_slave_select_high()
 }
 
 // First test in which one byte is exchanged
-uint8_t SPI_Master_test(void)
+uint8_t SPI_Master_test_2(void)
 {
 	// Test if the SPI module is already enabled	
 	if(!spi_master_open(MASTER0))
@@ -96,13 +96,13 @@ uint8_t SPI_Master_test(void)
     	drive_slave_select_low();
 
 
-    	rMessage = SPI1_ExchangeByte(tMessage);   //An example to exchange a single byte with the slave
-
-	//SPI1TXB = 0x33; //Se empieza la transferencia       0b01101001 
-    	//SPI1TXB = 0x55;     //recordatorio que 0xF = 0b1111 -> 0xFF = 0b11111111 
-    	//__delay_us(20);
-    	//SPI1TXB = 0xAA; //Se empieza la transferencia       0b01101001 
-    
+	SPI1TXB = 0x33; // First byte is exchanged, 0x33 = 0b01101001 
+    	SPI1TXB = 0x55; // Second byte is exchanged, 0x55 = 0b01010101
+    	__delay_us(20);	// A delay is added matching the clock frequency so that the first byte is already exchanged and a new byte can be loaded into the transfer buffer
+    	SPI1TXB = 0xAA; // Third byte is exchanged, 0xAA = 0b10101010   
+	__delay_us(20);	// A delay is added matching the clock frequency so that the first byte is already exchanged and a new byte can be loaded into the transfer buffer
+    	SPI1TXB = 0x55; // Second byte is exchanged, 0x55 = 0b01010101
+	
     	drive_slave_select_high();
     
     	SPI1_Close();
@@ -121,7 +121,7 @@ uint8_t SPI_Master_test(void)
 }
 
 // Second test in which a block of messages is exchanged uninterrupted
-uint8_t SPI_Master_test_2(void)      
+uint8_t SPI_Master_test(void)      
 {
 	// Test driver, assume that the SPI MISO and MOSI pins have been looped back
 	if(!spi_master_open(MASTER0))
