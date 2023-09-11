@@ -35,7 +35,7 @@ This device's firmware is programmed through Foundation Service libraries found 
   - SDI Active: High Level
   - SDO Active: High Level
 - Transfer Settings
-  - SDO transfers: according to the level of Slave Select
+  - Slave Select value: driven to the active state while transmit counter is not zero
   - Transmit: Enabled
   - Receive: Enabled
 - Clock Settings
