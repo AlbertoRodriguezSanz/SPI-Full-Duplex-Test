@@ -36,4 +36,5 @@ This device's firmware is programmed without the abstraction given by the use of
 - Clock Settings
   - Clock Source: High Frequency Internall Oscillator
   - Baud Clock: 4MHz
-
+- Implemented Functions
+  - ExchangeByte  
