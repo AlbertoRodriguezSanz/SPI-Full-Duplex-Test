@@ -59,9 +59,8 @@ void main(void)
     {
         // Add your application code
         
-        //__delay_ms(1);
-        //SPI_Master_2();
         SPI_Master_test();
+        //SPI_Master_2();
         
         
     }
