@@ -10,7 +10,7 @@ This device's firmware is programmed without the abstraction given by the use of
   - Brown-out Reset: Disabled, device will not reset when voltage drops under a certain threshold.
   - Watchdog Timer: Disabled, the Windowed Watchdog Timer will not be enabled for this test, to check for timing inaccuracies while executing instructions.
 - Clock Manager (OSCCON1-3, OSCEN, OSCFRQ and OSCTUNE registers)
-  -   
+  - hola  
 - Pin Manager:
   -   
 
