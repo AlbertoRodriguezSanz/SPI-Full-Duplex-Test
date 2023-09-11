@@ -120,10 +120,10 @@ uint8_t SPI_Master_test(void)
 	return 1;
 }
 
-uint8_t SPI_Master_2(void)      //this function is used to read the bytes received from the slave the first time
+// Second test in which a block of messages is exchanged uninterrumpted
+uint8_t SPI_Master_2(void)      
 {
 	// Test driver, assume that the SPI MISO and MOSI pins have been looped back
-	
 	if(!spi_master_open(MASTER0))
 		// Not able to open SPI, call fail() or optionally do something 
 		// else waiting for the SPI to become free
@@ -144,19 +144,16 @@ uint8_t SPI_Master_2(void)      //this function is used to read the bytes receiv
     	buffer2[2] = buffer[2];
    	buffer2[3] = buffer[3];
     
-   	 if(buffer2[0]==0xC8 && buffer2[1]==0xC8 && buffer2[2]==0xC8 && buffer2[2]==0xC8){
+   	// Check that the correct data was received
+	if(buffer2[0]==0xC8 && buffer2[1]==0xC8 && buffer2[2]==0xC8 && buffer2[2]==0xC8)
+ 	{
         	PORTCbits.RC2 = 1;
+		return 0; // wrong data was received
     
-}
-	
-	// Check that the correct data was received
-	//if (strncmp((char*)buffer, "data", strlen("data")))
-	//	return 0; // ERROR: Wrong data received
-	
-    
-    
-	// If we get here, everything was OK
-	return 1;
+	}
+	    
+		// If we get here, everything was OK
+		return 1;
 }
 
 /**
