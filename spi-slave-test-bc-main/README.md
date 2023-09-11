@@ -4,7 +4,7 @@ This device's firmware is programmed without the abstraction given by the use of
 
 ## Device configuration
 
--Configuration bits (CONFIG1-5H/L registers)
+- Configuration bits (CONFIG1-5H/L registers)
   - Oscillator source at power-up: High frequency internall oscillator with no clock division applied
   - Master Clear and Low Voltage Programming: MCLR and LVP are enabled, making the MCLR pin work for as a master clear for programming.
   - Brown-out Reset: Disabled, device will not reset when voltage drops under a certain threshold.
