@@ -117,7 +117,7 @@ static void SPI1_Initialize(void)
     //CLKSEL FOSC; 
     SPI1CLK = 0x00;
     //BAUD 0; 
-    SPI1BAUD = 0x01;        //0x1F para 64MHz, 0x01 para 16MHz
+    SPI1BAUD = 0x01;        //Fbaud = 4MHz -> SPI1BAUD of 0x1F for an Fcsel of 64MHz and SPI1BAUD of 0x01 for 16MHz
     TRISCbits.TRISC3 = 1;           
 }
 
