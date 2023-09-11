@@ -51,9 +51,6 @@ This example works like this:
 
 //static uint8_t buffer[4]= {0x55, 0x33, 0xFF, 0x00};
 static uint8_t buffer[4]= "data";
-uint8_t buffer2[4];
-uint8_t rMessage = "0x00";
-uint8_t tMessage = "0xA9";
 /*
  En este ejemplo cada uno de los 16 espacios de buffer es un byte.
  Por tanto cada letra de la palabra data es un byte, y el resto son 0x00
@@ -64,6 +61,10 @@ uint8_t tMessage = "0xA9";
  'a' = 0x61 = 0b01100001
  
  */
+
+uint8_t buffer2[4];
+uint8_t rMessage = "0x00";
+uint8_t tMessage = "0xA9";
 
 static void drive_slave_select_low(void);
 static void drive_slave_select_high(void);
