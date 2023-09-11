@@ -121,7 +121,7 @@ uint8_t SPI_Master_test(void)
 }
 
 // Second test in which a block of messages is exchanged uninterrupted
-uint8_t SPI_Master_2(void)      
+uint8_t SPI_Master_test_2(void)      
 {
 	// Test driver, assume that the SPI MISO and MOSI pins have been looped back
 	if(!spi_master_open(MASTER0))
