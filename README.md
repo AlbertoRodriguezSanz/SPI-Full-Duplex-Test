@@ -8,20 +8,13 @@ A breadboard with two PIC18F26K83 microcontrollers connected through two MCP2561
 ![broadboard_can_bus_top_viewjpg](https://github.com/AlbertoRodriguezSanz/CAN-Bus-Test/assets/95371514/c0f4a20e-199d-4b0a-b0b2-8a69f7578277) 
 
 For this test the PICkit4 in-circuit debugger/programmer will be used to load the firmware into the microcontroller. This needs to be connected to the microcontroller with the following pins.
-- MCLR
+- MCLR (needs to be connected through two series pull-up resistors (10kto Vdd)
 - PGD
 - PGC
 - VDD
 - VSS
-  
-![pickit4 connections](https://github.com/AlbertoRodriguezSanz/CAN-Bus-Test/assets/95371514/aca34265-d625-4ffe-b99b-b4cd80b32269)
 
-Unlike what is specified on the PICkit4 manual, microcontrollers need to add a second series resistor to the MCLR pin. Recommended values for the two resistrors are 10kΩ (R1) and 470Ω max.(R2).
-
-![mclr connection](https://github.com/AlbertoRodriguezSanz/CAN-Bus-Test/assets/95371514/b95aa3bf-8a20-4b94-be2d-364be542fe47)
-
-The microcontrollers are connected through two MCP2561 CAN transceivers. The two "programming" connectors represent the PICKIT4 pins shown previously.
-
+The microcontrollers are connected through two MCP2561 CAN transceivers. For such short distances, the use of termination resistors is not required. The two connectors represent the PICKIT4 pins required for programming each of the two microcontrollers. 
 ![protoboard_schematic](https://github.com/AlbertoRodriguezSanz/CAN-Bus-Test/assets/95371514/cc8b1035-44ea-4e5a-bbfc-5b08e4b7b556)
 
   
