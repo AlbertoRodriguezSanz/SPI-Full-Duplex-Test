@@ -1,6 +1,8 @@
 ### SPI Master Device
 
-This device's firmware is programmed through the Microchip Code Configurator, which generates all of the required functions for initialization and operation. 
+This device's firmware is programmed through the Microchip Code Configurator (MCC), which generates all of the required functions for initialization and operation. Within the firmware there are two tests for which 4 bytes are exchanged uninterrupted: 
+- SPI_Master_test: The function ExchangeData is modified to send an extra byte in between the other bytes, which allow sending the desired bytes whithout breaks.
+- SPI_Master_test_2: Four bytes are transfered taking into account the system's clock frequency to time the transfers. 
 
 ## Device configuration
 
@@ -12,8 +14,8 @@ This device's firmware is programmed through the Microchip Code Configurator, wh
 - Clock Manager (OSCCON1 and OSCFRQ registers)
   -   Clock Frequency: 16MHz, proceeding from a 64MHz base High-Frequency Oscillator Clock
 - Pin Manager:
-  -  Slave Select -> RA5 (input)
-  -  SPI clock -> RC3 (input)
+  -  Slave Select -> RA5 (output)
+  -  SPI clock -> RC3 (output)
   -  SPI Data Out (SDO) -> RC5 (output)
   -  SPI Data In (SDI) -> RC4 (input)
 
@@ -21,7 +23,7 @@ This device's firmware is programmed through the Microchip Code Configurator, wh
 
 - SPI Mode 0
   - Bit Count Mode (BMODE): 0
-  - Bus: Slave
+  - Bus: Master
   - MSB transmitted first
   - Sample Data Inout: Middle
   - Clock Transition: Active to Idle
@@ -29,7 +31,7 @@ This device's firmware is programmed through the Microchip Code Configurator, wh
   - Slave Select Active: Low Level
   - SDI Active: High Level
   - SDO Active: High Level
-- Slave Transfer Settings
+- Transfer Settings
   - SDO transfers: according to the level of Slave Select
   - Transmit: Enabled
   - Receive: Enabled
