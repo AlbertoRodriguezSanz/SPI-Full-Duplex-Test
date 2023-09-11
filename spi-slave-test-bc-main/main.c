@@ -121,10 +121,6 @@ static void SPI1_Initialize(void)
     TRISCbits.TRISC3 = 1;           
 }
 
-static void INTERRUPT_Initialize(void)
-{
-    INTCON0bits.IPEN = 0;
-}
 
 static uint8_t SPI1_exchangeByte(uint8_t data)
 {
@@ -133,20 +129,6 @@ static uint8_t SPI1_exchangeByte(uint8_t data)
     //SPI1TXB = 0x55;
     while(!PIR2bits.SPI1RXIF);
     return SPI1RXB; 
-}
-
-static void SPI1_RxInterruptHandler(void)
-{
-    //receiveData = SPI1_exchangeByte(writeData);
-}
-
-void __interrupt() INTERRUPT_InterruptManager(void)
-{
-   
-        if(PIE2bits.SPI1RXIE == 1 && PIR2bits.SPI1RXIF == 1)
-    {
-        SPI1_RxInterruptHandler();
-    }
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------------
