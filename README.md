@@ -24,7 +24,7 @@ Install MPLAB X IDE tool for Windows, Linux or MAC from the following link ([dow
 
 ## How to download the firmware to the PIC
 
-Once MPLAB is opened, load the project through *File > Open Project* and then select either `FSL_SPI_MASTER.mc3` or 'SPI_slave_bare_code.mc3' files. This will open the work environment, where `main.c` is the code file that will be compiled into the PIC. The project properties are accessed through *Production > Set Project Configuration > Customize...*, where the PICkit4 needs to be selected in the *Connected Hardware Tool* menu.
+Once MPLAB is opened, load the project through *File > Open Project* and then select either `FSL_SPI_MASTER.mc3` or `SPI_slave_bare_code.mc3` files. This will open the work environment, where `main.c` is the code file that will be compiled into the PIC. The project properties are accessed through *Production > Set Project Configuration > Customize...*, where the PICkit4 needs to be selected in the *Connected Hardware Tool* menu.
 ![Screenshot from 2023-09-01 14-19-52](https://github.com/AlbertoRodriguezSanz/CAN-Bus-Test/assets/95371514/248a38f8-ebf5-4f62-97c1-47c6fd496216)
 
 Modify the following options from the default parameters for the PICkit4 programmer from the Option categories dropdown menu.
