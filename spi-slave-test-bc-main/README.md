@@ -1,4 +1,4 @@
-###SPI Slave device
+### SPI Slave device
 
 This device's firmware is programmed without the abstraction given by the use of MCC, in a single file, which contains all of the required functions for initialization and operation. 
 
