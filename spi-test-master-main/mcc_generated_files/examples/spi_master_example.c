@@ -83,6 +83,42 @@ static void drive_slave_select_high()
 }
 
 // First test in which one byte is exchanged
+uint8_t SPI_Master_test(void)      
+{
+	// Test driver, assume that the SPI MISO and MOSI pins have been looped back
+	if(!spi_master_open(MASTER0))
+		// Not able to open SPI, call fail() or optionally do something 
+		// else waiting for the SPI to become free
+		return 0; 
+	
+	drive_slave_select_low();
+	
+	// The defined number of bytes are exchanged
+	SPI1_ExchangeBlock(buffer, sizeof(buffer));
+    
+    
+    	drive_slave_select_high();
+
+    	SPI1_Close();
+
+	buffer2[0] = buffer[0];
+	buffer2[1] = buffer[1];
+    	buffer2[2] = buffer[2];
+   	buffer2[3] = buffer[3];
+    
+   	// Check that the correct data was received
+	if(buffer2[0]==0xC8 && buffer2[1]==0xC8 && buffer2[2]==0xC8 && buffer2[2]==0xC8)
+ 	{
+        	PORTCbits.RC2 = 1;
+		return 0; // wrong data was received
+    
+	}
+	    
+		// If we get here, everything was OK
+		return 1;
+}
+
+// Second test in which a block of messages is exchanged uninterrupted
 uint8_t SPI_Master_test_2(void)
 {
 	// Test if the SPI module is already enabled	
@@ -111,42 +147,6 @@ uint8_t SPI_Master_test_2(void)
     
     	SPI1_Close();
    	
-   	// Check that the correct data was received
-	if(buffer2[0]==0xC8 && buffer2[1]==0xC8 && buffer2[2]==0xC8 && buffer2[2]==0xC8)
- 	{
-        	PORTCbits.RC2 = 1;
-		return 0; // wrong data was received
-    
-	}
-	    
-		// If we get here, everything was OK
-		return 1;
-}
-
-// Second test in which a block of messages is exchanged uninterrupted
-uint8_t SPI_Master_test(void)      
-{
-	// Test driver, assume that the SPI MISO and MOSI pins have been looped back
-	if(!spi_master_open(MASTER0))
-		// Not able to open SPI, call fail() or optionally do something 
-		// else waiting for the SPI to become free
-		return 0; 
-	
-	drive_slave_select_low();
-	
-	// The defined number of bytes are exchanged
-	SPI1_ExchangeBlock(buffer, sizeof(buffer));
-    
-    
-    	drive_slave_select_high();
-
-    	SPI1_Close();
-
-	buffer2[0] = buffer[0];
-	buffer2[1] = buffer[1];
-    	buffer2[2] = buffer[2];
-   	buffer2[3] = buffer[3];
-    
    	// Check that the correct data was received
 	if(buffer2[0]==0xC8 && buffer2[1]==0xC8 && buffer2[2]==0xC8 && buffer2[2]==0xC8)
  	{
