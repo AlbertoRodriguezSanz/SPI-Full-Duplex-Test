@@ -97,27 +97,30 @@ uint8_t SPI_Master_test_2(void)
 
 
 	SPI1TXB = 0x33; // First byte is exchanged, 0x33 = 0b01101001 
+	buffer[0] = SPI1TXB;
     	SPI1TXB = 0x55; // Second byte is exchanged, 0x55 = 0b01010101
+	buffer[1] = SPI1TXB;
     	__delay_us(20);	// A delay is added matching the clock frequency so that the first byte is already exchanged and a new byte can be loaded into the transfer buffer
-    	SPI1TXB = 0xAA; // Third byte is exchanged, 0xAA = 0b10101010   
+    	SPI1TXB = 0xAA; // Third byte is exchanged, 0xAA = 0b10101010 
+	buffer[2] = SPI1TXB;
 	__delay_us(20);	// A delay is added matching the clock frequency so that the first byte is already exchanged and a new byte can be loaded into the transfer buffer
     	SPI1TXB = 0x55; // Second byte is exchanged, 0x55 = 0b01010101
+	buffer[3] = SPI1TXB;
 	
     	drive_slave_select_high();
     
     	SPI1_Close();
-    
    	
-    }
+   	// Check that the correct data was received
+	if(buffer2[0]==0xC8 && buffer2[1]==0xC8 && buffer2[2]==0xC8 && buffer2[2]==0xC8)
+ 	{
+        	PORTCbits.RC2 = 1;
+		return 0; // wrong data was received
     
-	// Check that the correct data was received
-	//if (strncmp((char*)buffer, "data", strlen("data")))
-	//	return 0; // ERROR: Wrong data received
-	
-    
-    
-	// If we get here, everything was OK
-	return 1;
+	}
+	    
+		// If we get here, everything was OK
+		return 1;
 }
 
 // Second test in which a block of messages is exchanged uninterrupted
