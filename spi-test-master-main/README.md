@@ -1,6 +1,6 @@
 ### SPI Master Device
 
-This device's firmware is programmed through the Microchip Code Configurator (MCC), which generates all of the required functions for initialization and operation. Within the firmware there are two tests for which 4 bytes are exchanged uninterrupted: 
+This device's firmware is programmed through Foundation Service libraries found in the Microchip Code Configurator (MCC), which generates all of the required functions for initialization and operation. Within the firmware there are two tests for which 4 bytes are exchanged uninterrupted: 
 - SPI_Master_test: The function ExchangeData is modified to send an extra byte in between the other bytes, which allow sending the desired bytes whithout breaks.
 - SPI_Master_test_2: Four bytes are transfered taking into account the system's clock frequency to time the transfers. 
 
@@ -20,6 +20,9 @@ This device's firmware is programmed through the Microchip Code Configurator (MC
   -  SPI Data In (SDI) -> RC4 (input)
 
 ## SPI module configuration
+
+![spi_Master_fsl](https://github.com/AlbertoRodriguezSanz/SPI-Master-Transmit-Only-Test/assets/95371514/3aa8eacd-1583-4173-91d7-bd830cbe2b16)
+
 
 - SPI Mode 0
   - Bit Count Mode (BMODE): 0
