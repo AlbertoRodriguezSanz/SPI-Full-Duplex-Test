@@ -120,7 +120,7 @@ uint8_t SPI_Master_test(void)
 	return 1;
 }
 
-// Second test in which a block of messages is exchanged uninterrumpted
+// Second test in which a block of messages is exchanged uninterrupted
 uint8_t SPI_Master_2(void)      
 {
 	// Test driver, assume that the SPI MISO and MOSI pins have been looped back
