@@ -1,6 +1,6 @@
 ### SPI Slave device
 
-This device's firmware is programmed without the abstraction given by the use of MCC, in a single file, which contains all of the required functions for initialization and operation. 
+This device's firmware is programmed without the abstraction given by the use of Microchip Code Configurator (MCC), in a single file, which contains all of the required functions for initialization and operation. 
 
 ## Device configuration
 
@@ -29,7 +29,7 @@ This device's firmware is programmed without the abstraction given by the use of
   - Slave Select Active: Low Level
   - SDI Active: High Level
   - SDO Active: High Level
-- Slave Transfer Settings
+- Transfer Settings
   - SDO transfers: according to the level of Slave Select
   - Transmit: Enabled
   - Receive: Enabled
