@@ -21,6 +21,9 @@ The microcontrollers are connected through two MCP2561 CAN transceivers. For suc
 ## Requirements
 
 Install MPLAB X IDE tool for Windows, Linux or MAC from the following link ([download link](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide#tabs)).
+Install the latest version for the XC8 compiler toolchain from the following link([download link](https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers/downloads-documentation#XC8)).
+
+Always run a simple blinking LED test when running a PIC microcontroller program for the first time to make sure the microcontroller and the programmer work correctly. This test can be found in the following link ([blinky test](https://github.com/AlbertoRodriguezSanz/Blinky-test/tree/main)).
 
 ## How to download the firmware to the PIC
 
@@ -33,6 +36,8 @@ Modify the following options from the default parameters for the PICkit4 program
   - Voltage Level: 5V.
 - PICkit4 Tool Options
   - Program Speed: Low (Otherwise an error will pop up when trying to load the firmware).
+
+Make sure to always use the latest available firmware packs for the microcontroller, otherwise an "Script engine is not supported" error will pop up. A guide explaining the steps to update the firmware packs can be found in the following link ([FAQ link](https://microchip.my.site.com/s/article/MPLAB-X-IDE-v6-05-Script-engine-is-not-supported-error-and-disabled-Make-and-Program-Device-button#:~:text=The%20solution%20is%20to%20install,version%20for%20the%20specific%20programmer.)). 
 
 Then, follow the next steps:
 * Compile: `Production> Build Main Project`
