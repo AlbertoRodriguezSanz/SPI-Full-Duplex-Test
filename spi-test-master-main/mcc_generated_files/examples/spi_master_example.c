@@ -63,8 +63,8 @@ static uint8_t buffer[4]= "data";
  */
 
 uint8_t buffer2[4];
-uint8_t rMessage = "0x00";
-uint8_t tMessage = "0xA9";
+uint8_t rMessage = 0x00;
+uint8_t tMessage = 0xA9;
 
 static void drive_slave_select_low(void);
 static void drive_slave_select_high(void);
