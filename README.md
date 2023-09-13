@@ -21,7 +21,7 @@ The microcontrollers are connected through two MCP2561 CAN transceivers. For suc
 ## Requirements
 
 Install MPLAB X IDE tool for Windows, Linux or MAC from the following link ([download link](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide#tabs)).
-Install the latest version for the XC8 compiler toolchain from the following link([download link](https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers/downloads-documentation#XC8)).
+Install the latest version for the XC8 compiler toolchain from the following link ([download link](https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers/downloads-documentation#XC8)).
 
 Always run a simple blinking LED test when running a PIC microcontroller program for the first time to make sure the microcontroller and the programmer work correctly. This test can be found in the following link ([blinky test](https://github.com/AlbertoRodriguezSanz/Blinky-test/tree/main)).
 
