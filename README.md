@@ -45,6 +45,7 @@ Then, follow the next steps:
 
 ## How to download the firmware to the PIC
 Example of the expected bit timing diagram for both devices operating at a bus clock of 4MHz exchanging 4 bytes of data uninterrupted probed from the Slave device. 
+
 ![SPI_full_duplex_4_bytes_wirepuller](https://github.com/AlbertoRodriguezSanz/SPI-Master-Full-Duplex-Test/assets/95371514/8cec0679-3de8-4592-b545-275d96177c6c)
 
 
