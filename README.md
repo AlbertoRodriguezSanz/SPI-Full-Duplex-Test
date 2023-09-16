@@ -44,14 +44,6 @@ Then, follow the next steps:
 * Compile: `Production> Build Main Project`
 * Program: `Production> Make and Program Device Main Project`
 
-Example of the expected bit timing diagram for both devices operating at a bus clock of 4MHz exchanging 4 bytes of data uninterrupted probed from the Slave device. 
 
-![SPI_full_duplex_4_bytes_wirepuller](https://github.com/AlbertoRodriguezSanz/SPI-Master-Full-Duplex-Test/assets/95371514/8cec0679-3de8-4592-b545-275d96177c6c)
-
-
-- Channel 1 (Yellow): Slave Select (SS)
-- Channel 2 (Green): SPI Clock (SCK)
-- Channel 3 (Purple): Slave Serial Data Out (SDO, MISO)
-- Channel 4 (Blue): Slave Serial Data In (SDI, MOSI)
 
 
