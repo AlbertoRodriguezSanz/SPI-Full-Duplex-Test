@@ -25,7 +25,7 @@ Install the latest version for the XC8 compiler toolchain from the following lin
 
 Always run a simple blinking LED test when running a PIC microcontroller program for the first time to make sure the microcontroller and the programmer work correctly. This test can be found in the following link ([blinky test](https://github.com/AlbertoRodriguezSanz/Blinky-test/tree/main)).
 
-## How to download the firmware to the PIC
+## Operation
 
 Once MPLAB is opened, load the project through *File > Open Project* and then select either `FSL_SPI_MASTER.mc3` or `SPI_slave_bare_code.mc3` files. This will open the work environment, where `main.c` is the code file that will be compiled into the PIC. The project properties are accessed through *Production > Set Project Configuration > Customize...*, where the PICkit4 needs to be selected in the *Connected Hardware Tool* menu.
 ![Screenshot from 2023-09-01 14-19-52](https://github.com/AlbertoRodriguezSanz/CAN-Bus-Test/assets/95371514/248a38f8-ebf5-4f62-97c1-47c6fd496216)
@@ -43,7 +43,6 @@ Then, follow the next steps:
 * Compile: `Production> Build Main Project`
 * Program: `Production> Make and Program Device Main Project`
 
-## How to download the firmware to the PIC
 Example of the expected bit timing diagram for both devices operating at a bus clock of 4MHz exchanging 4 bytes of data uninterrupted probed from the Slave device. 
 
 ![SPI_full_duplex_4_bytes_wirepuller](https://github.com/AlbertoRodriguezSanz/SPI-Master-Full-Duplex-Test/assets/95371514/8cec0679-3de8-4592-b545-275d96177c6c)
