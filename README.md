@@ -42,3 +42,14 @@ Make sure to always use the latest available firmware packs for the microcontrol
 Then, follow the next steps:
 * Compile: `Production> Build Main Project`
 * Program: `Production> Make and Program Device Main Project`
+
+## How to download the firmware to the PIC
+Example of the expected bit timing diagram for both devices operating at a bus clock of 4MHz exchanging 4 bytes of data uninterrupted probed from the Slave device. 
+![SPI_full_duplex_4_bytes_wirepuller](https://github.com/AlbertoRodriguezSanz/SPI-Master-Full-Duplex-Test/assets/95371514/3dd49cb6-73f5-496b-bdd3-5b2ce631981c)
+
+- Channel 1 (Yellow): Slave Select (SS)
+- Channel 2 (Green): SPI Clock (SCK)
+- Channel 3 (Purple): Slave Serial Data Out (SDO, MISO)
+- Channel 4 (Blue): Slave Serial Data In (SDI, MOSI)
+
+
