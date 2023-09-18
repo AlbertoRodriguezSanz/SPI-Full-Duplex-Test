@@ -45,6 +45,14 @@ Then, follow the next steps:
 * Compile: `Production> Build Main Project`
 * Program: `Production> Make and Program Device Main Project`
 
+Example of the generated signals in the second test, where 4 continous bytes are exchanged:
 
+![spi_full_duplex_zoom](https://github.com/AlbertoRodriguezSanz/SPI-Master-Full-Duplex-Test/assets/95371514/545732bc-a777-4cf1-adee-cd5607c05ff8)
+
+
+- Channel 1 (Yellow): Slave Select (SS)
+- Channel 2 (Green): SPI Clock (SCK)
+- Channel 3 (Purple): Slave Serial Data In (SDI, MISO)
+- Channel 4 (Blue): Slave Serial Data Out (SDO, MOSI)
 
 
