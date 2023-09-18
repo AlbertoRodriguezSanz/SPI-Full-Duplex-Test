@@ -88,9 +88,9 @@ uint8_t SPI_Master_test(void)
 {
 	// Test driver, assume that the SPI MISO and MOSI pins have been looped back
 	if(!spi_master_open(MASTER0))
-		// Not able to open SPI, call fail() or optionally do something 
-		// else waiting for the SPI to become free
-		return 0; 
+	// Not able to open SPI, call fail() or optionally do something 
+	// else waiting for the SPI to become free
+	return 0; 
 	
 	drive_slave_select_low();
 	
@@ -124,9 +124,9 @@ uint8_t SPI_Master_test_2(void)
 {
 	// Test if the SPI module is already enabled	
 	if(!spi_master_open(MASTER0))
-		// Not able to open SPI, call fail() or optionally do something 
-		// else waiting for the SPI to become free
-		return 0; 
+	// Not able to open SPI, call fail() or optionally do something 
+	// else waiting for the SPI to become free
+	return 0; 
 	
     
     	// The slave device is selected to start the communication
