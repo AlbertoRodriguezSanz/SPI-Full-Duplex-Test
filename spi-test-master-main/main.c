@@ -59,8 +59,8 @@ void main(void)
     {
         // Add your application code
         
-        SPI_Master_test();
-        //SPI_Master_2();
+        //SPI_Master_test();
+        SPI_Master_test_2();
         
         
     }

@@ -88,9 +88,9 @@ uint8_t SPI_Master_test(void)
 {
 	// Test driver, assume that the SPI MISO and MOSI pins have been looped back
 	if(!spi_master_open(MASTER0))
-	// Not able to open SPI, call fail() or optionally do something 
-	// else waiting for the SPI to become free
-	return 0; 
+		// Not able to open SPI, call fail() or optionally do something 
+		// else waiting for the SPI to become free
+		return 0; 
 	
 	drive_slave_select_low();
 	
@@ -124,29 +124,31 @@ uint8_t SPI_Master_test_2(void)
 {
 	// Test if the SPI module is already enabled	
 	if(!spi_master_open(MASTER0))
-	// Not able to open SPI, call fail() or optionally do something 
-	// else waiting for the SPI to become free
-	return 0; 
-	
-    
-    	// The slave device is selected to start the communication
-    	drive_slave_select_low();
+    // Not able to open SPI, call fail() or optionally do something 
+    // else waiting for the SPI to become free
+    return 0; 
 
 
-	SPI1TXB = 0x33; // First byte is exchanged, 0x33 = 0b01101001 
-	buffer[0] = SPI1TXB;
-    	SPI1TXB = 0x55; // Second byte is exchanged, 0x55 = 0b01010101
-	buffer[1] = SPI1TXB;
-    	__delay_us(20);	// A delay is added matching the clock frequency so that the first byte is already exchanged and a new byte can be loaded into the transfer buffer
-    	SPI1TXB = 0xAA; // Third byte is exchanged, 0xAA = 0b10101010 
-	buffer[2] = SPI1TXB;
-	__delay_us(20);	// A delay is added matching the clock frequency so that the first byte is already exchanged and a new byte can be loaded into the transfer buffer
-    	SPI1TXB = 0x55; // Second byte is exchanged, 0x55 = 0b01010101
-	buffer[3] = SPI1TXB;
+    // The slave device is selected to start the communication
+    drive_slave_select_low();
+
+    SPI1TCNTL = 4;  //The transfer counter is loaded 
+	SPI1TXB = 0x33; // First byte is exchanged, 0x33 = 0b01101001
+    SPI1TXB = 0x55; // Second byte is exchanged, 0x55 = 0b01010101
+    __delay_us(3.75);	// A delay is added matching the clock frequency for 15 bits so that the first byte is already exchanged (the second close to ending). A new byte can be loaded into the transfer buffer
+    buffer[0] = SPI1RXB;
+    SPI1TXB = 0xff; // Third byte is exchanged, 0xAA = 0b10101010 	
+    __delay_us(3.75);	// A delay is added matching the clock frequency so that the first byte is already exchanged and a new byte can be loaded into the transfer buffer
+	buffer[1] = SPI1RXB;
+    SPI1TXB = 0x33; // Second byte is exchanged, 0x55 = 0b01010101
+	__delay_us(3.5);	// A delay is added matching the clock frequency so that the first byte is already exchanged and a new byte can be loaded into the transfer buffer	
+	buffer[2] = SPI1RXB;
+    //__delay_us(2);	// A delay is added matching the clock frequency so that the first byte is already exchanged and a new byte can be loaded into the transfer buffer	
+	buffer[3] = SPI1RXB;
 	
-    	drive_slave_select_high();
-    
-    	SPI1_Close();
+    drive_slave_select_high();
+
+    SPI1_Close();
    	
    	// Check that the correct data was received
 	if(buffer2[0]==0xC8 && buffer2[1]==0xC8 && buffer2[2]==0xC8 && buffer2[2]==0xC8)

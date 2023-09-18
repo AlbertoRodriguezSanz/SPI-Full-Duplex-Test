@@ -30,6 +30,6 @@
 #define _SPI_MASTER_EXAMPLE_H
 
 uint8_t SPI_Master_test(void);
-uint8_t SPI_Master_2(void);
+uint8_t SPI_Master_test_2(void);
 
 #endif  /* _SPI_MASTER_EXAMPLE_H */

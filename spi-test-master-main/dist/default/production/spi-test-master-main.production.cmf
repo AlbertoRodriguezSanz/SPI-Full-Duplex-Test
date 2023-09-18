@@ -1,0 +1,593 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/default/production/spi-test-master-main.production.o
+cinit CODE 0 1252 1252 32 1 2
+idloc IDLOC 5 200000 200000 10 1 1
+text0 CODE 0 12DA 12DA 14 1 2
+text1 CODE 0 12EE 12EE 12 1 2
+text2 CODE 0 12A8 12A8 1A 1 2
+text3 CODE 0 1284 1284 24 1 2
+text4 CODE 0 11B2 11B2 68 1 2
+text5 CODE 0 12C2 12C2 18 1 2
+text6 CODE 0 1104 1104 AE 1 2
+text7 CODE 0 121A 121A 38 1 2
+text8 CODE 0 1300 1300 8 1 2
+text9 CODE 0 1020 1020 E4 1 2
+text10 CODE 0 1314 1314 4 1 2
+text11 CODE 0 1318 1318 4 1 2
+text12 CODE 0 1308 1308 6 1 2
+idataCOMRAM CODE 0 130E 130E 5 1 1
+cstackCOMRAM COMRAM 1 B B 5 1 1
+smallconst SMALLCONST 0 1000 1000 20 1 2
+dataCOMRAM COMRAM 1 6 6 5 1 1
+bssCOMRAM COMRAM 1 1 1 5 1 1
+config CONFIG 4 300000 300000 A 1 1
+$/tmp/xcXLDnMPh.o
+idloc IDLOC 5 200000 200000 10 1 1
+init CODE 0 FFFC FFFC 4 1 2
+reset_vec CODE 0 0 0 4 1 2
+config CONFIG 4 300000 300000 A 1 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 60-FFF 1
+SFR 3700-3FFF 1
+BANK0 60-FF 1
+BANK1 100-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+BANK8 800-8FF 1
+BANK9 900-9FF 1
+CONST 4-FFF 1
+CONST 1313-1313 1
+CONST 131C-FFFB 1
+SMALLCONST 1313-1313 1
+SMALLCONST 131C-FFFB 1
+CODE 4-FFF 1
+CODE 1313-1313 1
+CODE 131C-FFFB 1
+BANK10 A00-AFF 1
+BANK11 B00-BFF 1
+BANK12 C00-CFF 1
+BANK13 D00-DFF 1
+BANK14 E00-EFF 1
+BANK15 F00-FFF 1
+BIGRAM 10-FFF 1
+BIGSFR 3700-3FFF 1
+COMRAM 10-5F 1
+EEDATA 310000-3103FF 1
+MEDIUMCONST 1313-1313 1
+MEDIUMCONST 131C-FFFB 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production/spi-test-master-main.production.o
+1308 text12 CODE >107:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/spi1.c
+1308 text12 CODE >109:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/spi1.c
+130C text12 CODE >110:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/spi1.c
+1318 text11 CODE >80:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/examples/spi_master_example.c
+1318 text11 CODE >83:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/examples/spi_master_example.c
+131A text11 CODE >84:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/examples/spi_master_example.c
+1314 text10 CODE >73:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/examples/spi_master_example.c
+1314 text10 CODE >76:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/examples/spi_master_example.c
+1316 text10 CODE >77:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/examples/spi_master_example.c
+1020 text9 CODE >91:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/spi1.c
+1022 text9 CODE >93:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/spi1.c
+1032 text9 CODE >95:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/spi1.c
+1050 text9 CODE >96:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/spi1.c
+1076 text9 CODE >97:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/spi1.c
+109C text9 CODE >98:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/spi1.c
+10C2 text9 CODE >99:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/spi1.c
+10F8 text9 CODE >100:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/spi1.c
+10FA text9 CODE >102:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/spi1.c
+1100 text9 CODE >104:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/spi1.c
+1102 text9 CODE >105:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/spi1.c
+1300 text8 CODE >41:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/drivers/spi_master.c
+1300 text8 CODE >42:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/drivers/spi_master.c
+1306 text8 CODE >43:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/drivers/spi_master.c
+121A text7 CODE >56:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/drivers/spi_master.c
+121C text7 CODE >57:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/drivers/spi_master.c
+1220 text7 CODE >59:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/drivers/spi_master.c
+1228 text7 CODE >61:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/drivers/spi_master.c
+122E text7 CODE >62:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/drivers/spi_master.c
+1238 text7 CODE >62:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/drivers/spi_master.c
+1246 text7 CODE >62:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/drivers/spi_master.c
+1250 text7 CODE >63:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/drivers/spi_master.c
+1104 text6 CODE >123:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/examples/spi_master_example.c
+1104 text6 CODE >126:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/examples/spi_master_example.c
+111E text6 CODE >133:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/examples/spi_master_example.c
+1122 text6 CODE >135:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/examples/spi_master_example.c
+1128 text6 CODE >136:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/examples/spi_master_example.c
+112C text6 CODE >137:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/examples/spi_master_example.c
+1130 text6 CODE >138:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/examples/spi_master_example.c
+1134 text6 CODE >139:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/examples/spi_master_example.c
+113A text6 CODE >140:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/examples/spi_master_example.c
+113E text6 CODE >141:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/examples/spi_master_example.c
+1142 text6 CODE >142:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/examples/spi_master_example.c
+1148 text6 CODE >143:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/examples/spi_master_example.c
+114E text6 CODE >144:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/examples/spi_master_example.c
+1152 text6 CODE >145:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/examples/spi_master_example.c
+1158 text6 CODE >147:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/examples/spi_master_example.c
+115E text6 CODE >149:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/examples/spi_master_example.c
+1162 text6 CODE >151:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/examples/spi_master_example.c
+1166 text6 CODE >154:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/examples/spi_master_example.c
+11AE text6 CODE >156:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/examples/spi_master_example.c
+11B0 text6 CODE >163:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/examples/spi_master_example.c
+12C2 text5 CODE >58:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/mcc.c
+12C2 text5 CODE >61:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/mcc.c
+12C8 text5 CODE >63:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/mcc.c
+12CC text5 CODE >65:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/mcc.c
+12D0 text5 CODE >67:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/mcc.c
+12D4 text5 CODE >69:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/mcc.c
+12D8 text5 CODE >70:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/mcc.c
+11B2 text4 CODE >55:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+11B2 text4 CODE >60:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+11B6 text4 CODE >61:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+11BA text4 CODE >62:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+11BE text4 CODE >67:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+11C2 text4 CODE >68:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+11C4 text4 CODE >69:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+11C8 text4 CODE >74:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+11CE text4 CODE >75:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+11D0 text4 CODE >76:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+11D4 text4 CODE >81:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+11D8 text4 CODE >82:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+11DC text4 CODE >83:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+11E0 text4 CODE >84:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+11E4 text4 CODE >89:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+11E8 text4 CODE >90:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+11EC text4 CODE >91:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+11F0 text4 CODE >96:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+11F2 text4 CODE >97:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+11F4 text4 CODE >98:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+11F6 text4 CODE >103:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+11F8 text4 CODE >104:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+11FA text4 CODE >105:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+11FC text4 CODE >106:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+1200 text4 CODE >111:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+1204 text4 CODE >112:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+1208 text4 CODE >116:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+120C text4 CODE >117:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+1210 text4 CODE >118:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+1214 text4 CODE >119:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+1218 text4 CODE >120:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/pin_manager.c
+1284 text3 CODE >72:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/mcc.c
+1284 text3 CODE >75:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/mcc.c
+128A text3 CODE >77:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/mcc.c
+128E text3 CODE >79:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/mcc.c
+1292 text3 CODE >81:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/mcc.c
+1296 text3 CODE >83:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/mcc.c
+129A text3 CODE >85:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/mcc.c
+129E text3 CODE >87:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/mcc.c
+12A2 text3 CODE >89:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/mcc.c
+12A6 text3 CODE >90:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/mcc.c
+12A8 text2 CODE >76:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/spi1.c
+12A8 text2 CODE >79:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/spi1.c
+12AE text2 CODE >81:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/spi1.c
+12B2 text2 CODE >83:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/spi1.c
+12B6 text2 CODE >85:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/spi1.c
+12BA text2 CODE >87:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/spi1.c
+12BE text2 CODE >88:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/spi1.c
+12C0 text2 CODE >89:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/spi1.c
+12EE text1 CODE >50:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/mcc.c
+12EE text1 CODE >52:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/mcc.c
+12F2 text1 CODE >53:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/mcc.c
+12F6 text1 CODE >54:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/mcc.c
+12FA text1 CODE >55:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/mcc.c
+12FE text1 CODE >56:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/mcc_generated_files/mcc.c
+12DA text0 CODE >51:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/main.c
+12DA text0 CODE >54:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/main.c
+12DE text0 CODE >55:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/main.c
+12E0 text0 CODE >56:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/main.c
+12E2 text0 CODE >63:/home/teo/Documents/Alberto MPLAB/SPI-Master-Full-Duplex-Test-main/spi-test-master-main/main.c
+1252 cinit CODE >10449:/tmp/xcXabFBil.s
+1252 cinit CODE >10451:/tmp/xcXabFBil.s
+1252 cinit CODE >10454:/tmp/xcXabFBil.s
+1252 cinit CODE >10485:/tmp/xcXabFBil.s
+1254 cinit CODE >10486:/tmp/xcXabFBil.s
+1256 cinit CODE >10487:/tmp/xcXabFBil.s
+1258 cinit CODE >10488:/tmp/xcXabFBil.s
+125A cinit CODE >10489:/tmp/xcXabFBil.s
+125C cinit CODE >10490:/tmp/xcXabFBil.s
+125E cinit CODE >10491:/tmp/xcXabFBil.s
+1262 cinit CODE >10492:/tmp/xcXabFBil.s
+1266 cinit CODE >10493:/tmp/xcXabFBil.s
+1266 cinit CODE >10494:/tmp/xcXabFBil.s
+1268 cinit CODE >10495:/tmp/xcXabFBil.s
+126E cinit CODE >10496:/tmp/xcXabFBil.s
+1270 cinit CODE >10497:/tmp/xcXabFBil.s
+1272 cinit CODE >10498:/tmp/xcXabFBil.s
+1274 cinit CODE >10502:/tmp/xcXabFBil.s
+1276 cinit CODE >10503:/tmp/xcXabFBil.s
+1278 cinit CODE >10504:/tmp/xcXabFBil.s
+127A cinit CODE >10505:/tmp/xcXabFBil.s
+127C cinit CODE >10506:/tmp/xcXabFBil.s
+127E cinit CODE >10512:/tmp/xcXabFBil.s
+127E cinit CODE >10514:/tmp/xcXabFBil.s
+1280 cinit CODE >10515:/tmp/xcXabFBil.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+_SPI1SCKPPS 3AE0 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_SPI1SDIPPS 3AE1 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production/spi-test-master-main.production.o
+_drive_slave_select_low 1314 0 CODE 0 text10 dist/default/production/spi-test-master-main.production.o
+__Hspace_0 10000 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__Hspace_1 10 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__Hspace_2 0 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__Hspace_4 60000A 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/production/spi-test-master-main.production.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst /tmp/xcXLDnMPh.o
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production/spi-test-master-main.production.o
+_PMD_Initialize 1284 0 CODE 0 text3 dist/default/production/spi-test-master-main.production.o
+_SPI1_ReadByte 0 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__Lsmallconst 1000 0 SMALLCONST 0 smallconst dist/default/production/spi-test-master-main.production.o
+_LATA 3FBA 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_LATB 3FBB 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_LATC 3FBC 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_PMD0 39C0 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_PMD1 39C1 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_PMD2 39C2 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_PMD3 39C3 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_PMD4 39C4 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_PMD5 39C5 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_PMD6 39C6 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_PMD7 39C7 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_WPUA 3A41 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_WPUB 3A51 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_WPUC 3A61 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_WPUE 3A81 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+___sp 0 0 STACK 2 stack /tmp/xcXLDnMPh.o
+_main 12DA 0 CODE 0 text0 dist/default/production/spi-test-master-main.production.o
+start FFFC 0 CODE 0 init /tmp/xcXLDnMPh.o
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production/spi-test-master-main.production.o
+__end_of_SPI1_Initialize 12C2 0 CODE 0 text2 dist/default/production/spi-test-master-main.production.o
+__Hpowerup 0 0 CODE 0 powerup dist/default/production/spi-test-master-main.production.o
+__end_of_spi1_configuration 101F 0 SMALLCONST 0 smallconst dist/default/production/spi-test-master-main.production.o
+_SPI1_Close 1308 0 CODE 0 text12 dist/default/production/spi-test-master-main.production.o
+__HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production/spi-test-master-main.production.o
+__accesstop 60 0 ABS 0 - /tmp/xcXLDnMPh.o
+intlevel0 0 0 CODE 0 text /tmp/xcXLDnMPh.o
+intlevel1 0 0 CODE 0 text /tmp/xcXLDnMPh.o
+intlevel2 0 0 CODE 0 text /tmp/xcXLDnMPh.o
+intlevel3 0 0 CODE 0 text /tmp/xcXLDnMPh.o
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production/spi-test-master-main.production.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production/spi-test-master-main.production.o
+__Hifardata 0 0 CODE 0 ifardata dist/default/production/spi-test-master-main.production.o
+__end_of_PMD_Initialize 12A8 0 CODE 0 text3 dist/default/production/spi-test-master-main.production.o
+__Hclrtext 0 0 ABS 0 clrtext dist/default/production/spi-test-master-main.production.o
+__pidataCOMRAM 130E 0 CODE 0 idataCOMRAM dist/default/production/spi-test-master-main.production.o
+_SPI1_WriteBlock 0 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_SPI1CON0bits 3D14 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_SPI1_Initialize 12A8 0 CODE 0 text2 dist/default/production/spi-test-master-main.production.o
+_spi1_configuration 1015 0 SMALLCONST 0 smallconst dist/default/production/spi-test-master-main.production.o
+_ANSELA 3A40 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_ANSELB 3A50 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_ANSELC 3A60 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+___inthi_sp 0 0 STACK 2 stack /tmp/xcXLDnMPh.o
+___intlo_sp 0 0 STACK 2 stack /tmp/xcXLDnMPh.o
+__LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production/spi-test-master-main.production.o
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production/spi-test-master-main.production.o
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production/spi-test-master-main.production.o
+__end_of_SPI1_Close 130E 0 CODE 0 text12 dist/default/production/spi-test-master-main.production.o
+spi_master_open@config F 0 COMRAM 1 cstackCOMRAM dist/default/production/spi-test-master-main.production.o
+_INLVLA 3A44 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_INLVLB 3A54 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_INLVLC 3A64 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_INLVLE 3A84 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__end_of_spi_master_open 1252 0 CODE 0 text7 dist/default/production/spi-test-master-main.production.o
+__LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production/spi-test-master-main.production.o
+_PIN_MANAGER_Initialize 11B2 0 CODE 0 text4 dist/default/production/spi-test-master-main.production.o
+__end_of_drive_slave_select_low 1318 0 CODE 0 text10 dist/default/production/spi-test-master-main.production.o
+start_initialization 1252 0 CODE 0 cinit dist/default/production/spi-test-master-main.production.o
+_ODCONA 3A42 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_ODCONB 3A52 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_ODCONC 3A62 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_OSCFRQ 39DF 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production/spi-test-master-main.production.o
+_tMessage 6 0 COMRAM 1 dataCOMRAM dist/default/production/spi-test-master-main.production.o
+_TRISCbits 3FC4 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+___rparam_used 1 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_RA5PPS 3A05 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_RC3PPS 3A13 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_RC5PPS 3A15 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__end_of_SYSTEM_Initialize 1300 0 CODE 0 text1 dist/default/production/spi-test-master-main.production.o
+_drive_slave_select_high 1318 0 CODE 0 text11 dist/default/production/spi-test-master-main.production.o
+__end_of_drive_slave_select_high 131C 0 CODE 0 text11 dist/default/production/spi-test-master-main.production.o
+isa$xinst 0 0 ABS 0 - /tmp/xcXLDnMPh.o
+_spi_master_open 121A 0 CODE 0 text7 dist/default/production/spi-test-master-main.production.o
+__Hbank0 0 0 ABS 0 bank0 dist/default/production/spi-test-master-main.production.o
+__Hbank1 0 0 ABS 0 bank1 dist/default/production/spi-test-master-main.production.o
+__Hbank2 0 0 ABS 0 bank2 dist/default/production/spi-test-master-main.production.o
+__Hbank3 0 0 ABS 0 bank3 dist/default/production/spi-test-master-main.production.o
+__Hbank4 0 0 ABS 0 bank4 dist/default/production/spi-test-master-main.production.o
+__Hbank5 0 0 ABS 0 bank5 dist/default/production/spi-test-master-main.production.o
+__Hbank6 0 0 ABS 0 bank6 dist/default/production/spi-test-master-main.production.o
+__Hbank7 0 0 ABS 0 bank7 dist/default/production/spi-test-master-main.production.o
+__Hbank8 0 0 ABS 0 bank8 dist/default/production/spi-test-master-main.production.o
+__Hbank9 0 0 ABS 0 bank9 dist/default/production/spi-test-master-main.production.o
+__Hcinit 0 0 ABS 0 cinit dist/default/production/spi-test-master-main.production.o
+__Hconst 0 0 CONST 0 const dist/default/production/spi-test-master-main.production.o
+__Hidata 0 0 CODE 0 idata dist/default/production/spi-test-master-main.production.o
+__Hidloc 200010 0 IDLOC 5 idloc dist/default/production/spi-test-master-main.production.o
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/production/spi-test-master-main.production.o
+__Hparam 0 0 COMRAM 1 rparam dist/default/production/spi-test-master-main.production.o
+__Hrdata 0 0 COMRAM 1 rdata dist/default/production/spi-test-master-main.production.o
+__Hstack 0 0 STACK 2 stack dist/default/production/spi-test-master-main.production.o
+__Htext0 0 0 ABS 0 text0 dist/default/production/spi-test-master-main.production.o
+__Htext1 0 0 ABS 0 text1 dist/default/production/spi-test-master-main.production.o
+__Htext2 0 0 ABS 0 text2 dist/default/production/spi-test-master-main.production.o
+__Htext3 0 0 ABS 0 text3 dist/default/production/spi-test-master-main.production.o
+__Htext4 0 0 ABS 0 text4 dist/default/production/spi-test-master-main.production.o
+__Htext5 0 0 ABS 0 text5 dist/default/production/spi-test-master-main.production.o
+__Htext6 0 0 ABS 0 text6 dist/default/production/spi-test-master-main.production.o
+__Htext7 0 0 ABS 0 text7 dist/default/production/spi-test-master-main.production.o
+__Htext8 0 0 ABS 0 text8 dist/default/production/spi-test-master-main.production.o
+__Htext9 0 0 ABS 0 text9 dist/default/production/spi-test-master-main.production.o
+__Hbank10 0 0 ABS 0 bank10 dist/default/production/spi-test-master-main.production.o
+__Hbank11 0 0 ABS 0 bank11 dist/default/production/spi-test-master-main.production.o
+__Hbank12 0 0 ABS 0 bank12 dist/default/production/spi-test-master-main.production.o
+__Hbank13 0 0 ABS 0 bank13 dist/default/production/spi-test-master-main.production.o
+__Hbank14 0 0 ABS 0 bank14 dist/default/production/spi-test-master-main.production.o
+__Hbank15 0 0 ABS 0 bank15 dist/default/production/spi-test-master-main.production.o
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production/spi-test-master-main.production.o
+__Hbigram 0 0 ABS 0 bigram dist/default/production/spi-test-master-main.production.o
+__Hbigsfr 0 0 ABS 0 bigsfr dist/default/production/spi-test-master-main.production.o
+__smallconst 1000 0 SMALLCONST 0 smallconst /tmp/xcXLDnMPh.o
+__Hcomram 0 0 ABS 0 comram dist/default/production/spi-test-master-main.production.o
+__Hconfig 30000A 0 CONFIG 4 config dist/default/production/spi-test-master-main.production.o
+__Lbank0 0 0 ABS 0 bank0 dist/default/production/spi-test-master-main.production.o
+__Lbank1 0 0 ABS 0 bank1 dist/default/production/spi-test-master-main.production.o
+__Lbank2 0 0 ABS 0 bank2 dist/default/production/spi-test-master-main.production.o
+__Lbank3 0 0 ABS 0 bank3 dist/default/production/spi-test-master-main.production.o
+__Lbank4 0 0 ABS 0 bank4 dist/default/production/spi-test-master-main.production.o
+__Lbank5 0 0 ABS 0 bank5 dist/default/production/spi-test-master-main.production.o
+__Lbank6 0 0 ABS 0 bank6 dist/default/production/spi-test-master-main.production.o
+__Lbank7 0 0 ABS 0 bank7 dist/default/production/spi-test-master-main.production.o
+__Lbank8 0 0 ABS 0 bank8 dist/default/production/spi-test-master-main.production.o
+__Lbank9 0 0 ABS 0 bank9 dist/default/production/spi-test-master-main.production.o
+__Lcinit 0 0 ABS 0 cinit dist/default/production/spi-test-master-main.production.o
+__Lconst 0 0 CONST 0 const dist/default/production/spi-test-master-main.production.o
+__Lidata 0 0 CODE 0 idata dist/default/production/spi-test-master-main.production.o
+__Lidloc 0 0 IDLOC 5 idloc dist/default/production/spi-test-master-main.production.o
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/production/spi-test-master-main.production.o
+__Lparam 0 0 COMRAM 1 rparam dist/default/production/spi-test-master-main.production.o
+__Lrdata 0 0 COMRAM 1 rdata dist/default/production/spi-test-master-main.production.o
+__Lstack 0 0 STACK 2 stack dist/default/production/spi-test-master-main.production.o
+__Ltext0 0 0 ABS 0 text0 dist/default/production/spi-test-master-main.production.o
+__Ltext1 0 0 ABS 0 text1 dist/default/production/spi-test-master-main.production.o
+__Ltext2 0 0 ABS 0 text2 dist/default/production/spi-test-master-main.production.o
+__Ltext3 0 0 ABS 0 text3 dist/default/production/spi-test-master-main.production.o
+__Ltext4 0 0 ABS 0 text4 dist/default/production/spi-test-master-main.production.o
+__Ltext5 0 0 ABS 0 text5 dist/default/production/spi-test-master-main.production.o
+__Ltext6 0 0 ABS 0 text6 dist/default/production/spi-test-master-main.production.o
+__Ltext7 0 0 ABS 0 text7 dist/default/production/spi-test-master-main.production.o
+__Ltext8 0 0 ABS 0 text8 dist/default/production/spi-test-master-main.production.o
+__Ltext9 0 0 ABS 0 text9 dist/default/production/spi-test-master-main.production.o
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/production/spi-test-master-main.production.o
+_PORTAbits 3FCA 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_PORTCbits 3FCC 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__Habs1 0 0 ABS 0 abs1 dist/default/production/spi-test-master-main.production.o
+__Hdata 0 0 ABS 0 data dist/default/production/spi-test-master-main.production.o
+__Hheap 0 0 HEAP 7 heap dist/default/production/spi-test-master-main.production.o
+__Hinit 10000 0 CODE 0 init dist/default/production/spi-test-master-main.production.o
+__Hrbit 0 0 COMRAM 1 rbit dist/default/production/spi-test-master-main.production.o
+__Hrbss 0 0 COMRAM 1 rbss dist/default/production/spi-test-master-main.production.o
+__Htemp 0 0 COMRAM 1 temp dist/default/production/spi-test-master-main.production.o
+__Htext 0 0 ABS 0 text dist/default/production/spi-test-master-main.production.o
+__Labs1 0 0 ABS 0 abs1 dist/default/production/spi-test-master-main.production.o
+__Ldata 0 0 ABS 0 data dist/default/production/spi-test-master-main.production.o
+__Lheap 0 0 HEAP 7 heap dist/default/production/spi-test-master-main.production.o
+__Linit FFFC 0 CODE 0 init dist/default/production/spi-test-master-main.production.o
+__Lrbit 0 0 COMRAM 1 rbit dist/default/production/spi-test-master-main.production.o
+__Lrbss 0 0 COMRAM 1 rbss dist/default/production/spi-test-master-main.production.o
+__Ltemp 0 0 COMRAM 1 temp dist/default/production/spi-test-master-main.production.o
+__Ltext 0 0 ABS 0 text dist/default/production/spi-test-master-main.production.o
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production/spi-test-master-main.production.o
+__Hirdata 0 0 CODE 0 irdata dist/default/production/spi-test-master-main.production.o
+__S0 10000 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__S1 10 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__S4 0 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__S5 0 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_rMessage 5 0 COMRAM 1 bssCOMRAM dist/default/production/spi-test-master-main.production.o
+__end_of_SPI_Master_test_2 11B2 0 CODE 0 text6 dist/default/production/spi-test-master-main.production.o
+_buffer 7 0 COMRAM 1 dataCOMRAM dist/default/production/spi-test-master-main.production.o
+_SPI1BAUD 3D19 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_SPI1CON0 3D14 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_SPI1CON1 3D15 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_SPI1CON2 3D16 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production/spi-test-master-main.production.o
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production/spi-test-master-main.production.o
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/production/spi-test-master-main.production.o
+_SYSTEM_Initialize 12EE 0 CODE 0 text1 dist/default/production/spi-test-master-main.production.o
+__Hramtop 1000 0 RAM 0 ramtop dist/default/production/spi-test-master-main.production.o
+__Hrparam 0 0 COMRAM 1 rparam dist/default/production/spi-test-master-main.production.o
+__activetblptr 3 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__Hstruct 0 0 COMRAM 1 struct dist/default/production/spi-test-master-main.production.o
+__Htext10 0 0 ABS 0 text10 dist/default/production/spi-test-master-main.production.o
+__Htext11 0 0 ABS 0 text11 dist/default/production/spi-test-master-main.production.o
+__Htext12 0 0 ABS 0 text12 dist/default/production/spi-test-master-main.production.o
+__Htext13 0 0 ABS 0 text13 dist/default/production/spi-test-master-main.production.o
+__ptext10 1314 0 CODE 0 text10 dist/default/production/spi-test-master-main.production.o
+__ptext11 1318 0 CODE 0 text11 dist/default/production/spi-test-master-main.production.o
+__ptext12 1308 0 CODE 0 text12 dist/default/production/spi-test-master-main.production.o
+__ptext13 0 0 CODE 0 text13 dist/default/production/spi-test-master-main.production.o
+__end_of_PIN_MANAGER_Initialize 121A 0 CODE 0 text4 dist/default/production/spi-test-master-main.production.o
+__Lbank10 0 0 ABS 0 bank10 dist/default/production/spi-test-master-main.production.o
+__Lbank11 0 0 ABS 0 bank11 dist/default/production/spi-test-master-main.production.o
+__Lbank12 0 0 ABS 0 bank12 dist/default/production/spi-test-master-main.production.o
+__Lbank13 0 0 ABS 0 bank13 dist/default/production/spi-test-master-main.production.o
+__Lbank14 0 0 ABS 0 bank14 dist/default/production/spi-test-master-main.production.o
+__Lbank15 0 0 ABS 0 bank15 dist/default/production/spi-test-master-main.production.o
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production/spi-test-master-main.production.o
+__Lbigram 0 0 ABS 0 bigram dist/default/production/spi-test-master-main.production.o
+__Lbigsfr 0 0 ABS 0 bigsfr dist/default/production/spi-test-master-main.production.o
+__Lcomram 0 0 ABS 0 comram dist/default/production/spi-test-master-main.production.o
+__Lconfig 0 0 CONFIG 4 config dist/default/production/spi-test-master-main.production.o
+_SPI1_WriteByte 0 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__end_of_spiMaster 1015 0 SMALLCONST 0 smallconst dist/default/production/spi-test-master-main.production.o
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/production/spi-test-master-main.production.o
+_SPI1_ExchangeByte 0 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__Lfardata 0 0 FARRAM 0 fardata dist/default/production/spi-test-master-main.production.o
+isa$std 1 0 ABS 0 - /tmp/xcXLDnMPh.o
+__end_of_SPI1_Open 1104 0 CODE 0 text9 dist/default/production/spi-test-master-main.production.o
+_SPI_Master_test_2 1104 0 CODE 0 text6 dist/default/production/spi-test-master-main.production.o
+stackhi 0 0 ABS 0 - /tmp/xcXLDnMPh.o
+stacklo 0 0 ABS 0 - /tmp/xcXLDnMPh.o
+_OSCCON1 39D9 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_OSCCON3 39DB 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_OSCTUNE 39DE 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__Lirdata 0 0 CODE 0 irdata dist/default/production/spi-test-master-main.production.o
+_spiMaster 1001 0 SMALLCONST 0 smallconst dist/default/production/spi-test-master-main.production.o
+__Lspace_0 0 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__Lspace_1 0 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__Lspace_2 0 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__Lspace_4 0 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__pbssCOMRAM 1 0 COMRAM 1 bssCOMRAM dist/default/production/spi-test-master-main.production.o
+_PIR2bits 39A2 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_buffer2 1 0 COMRAM 1 bssCOMRAM dist/default/production/spi-test-master-main.production.o
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production/spi-test-master-main.production.o
+SPI1_Open@spi1UniqueConfiguration C 0 COMRAM 1 cstackCOMRAM dist/default/production/spi-test-master-main.production.o
+_SPI1SSPPS 3AE2 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_SPI1TCNTL 3D12 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+end_of_initialization 127E 0 CODE 0 cinit dist/default/production/spi-test-master-main.production.o
+_SPI1_Open 1020 0 CODE 0 text9 dist/default/production/spi-test-master-main.production.o
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/production/spi-test-master-main.production.o
+_SPI1_ExchangeBlock 0 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__Hreset_vec 4 0 CODE 0 reset_vec dist/default/production/spi-test-master-main.production.o
+__Lramtop 1000 0 RAM 0 ramtop dist/default/production/spi-test-master-main.production.o
+__Lrparam 0 0 COMRAM 1 rparam dist/default/production/spi-test-master-main.production.o
+__pcinit 1252 0 CODE 0 cinit dist/default/production/spi-test-master-main.production.o
+__ptext0 12DA 0 CODE 0 text0 dist/default/production/spi-test-master-main.production.o
+__ptext1 12EE 0 CODE 0 text1 dist/default/production/spi-test-master-main.production.o
+__ptext2 12A8 0 CODE 0 text2 dist/default/production/spi-test-master-main.production.o
+__ptext3 1284 0 CODE 0 text3 dist/default/production/spi-test-master-main.production.o
+__ptext4 11B2 0 CODE 0 text4 dist/default/production/spi-test-master-main.production.o
+__ptext5 12C2 0 CODE 0 text5 dist/default/production/spi-test-master-main.production.o
+__ptext6 1104 0 CODE 0 text6 dist/default/production/spi-test-master-main.production.o
+__ptext7 121A 0 CODE 0 text7 dist/default/production/spi-test-master-main.production.o
+__ptext8 1300 0 CODE 0 text8 dist/default/production/spi-test-master-main.production.o
+__ptext9 1020 0 CODE 0 text9 dist/default/production/spi-test-master-main.production.o
+__Lstruct 0 0 COMRAM 1 struct dist/default/production/spi-test-master-main.production.o
+__Ltext10 0 0 ABS 0 text10 dist/default/production/spi-test-master-main.production.o
+__Ltext11 0 0 ABS 0 text11 dist/default/production/spi-test-master-main.production.o
+__Ltext12 0 0 ABS 0 text12 dist/default/production/spi-test-master-main.production.o
+__Ltext13 0 0 ABS 0 text13 dist/default/production/spi-test-master-main.production.o
+__ramtop 1000 0 RAM 0 ramtop /tmp/xcXLDnMPh.o
+_MASTER0_open 1300 0 CODE 0 text8 dist/default/production/spi-test-master-main.production.o
+__Lpowerup 0 0 CODE 0 powerup dist/default/production/spi-test-master-main.production.o
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production/spi-test-master-main.production.o
+_SPI1_ReadBlock 0 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__psmallconst 1000 0 SMALLCONST 0 smallconst dist/default/production/spi-test-master-main.production.o
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/production/spi-test-master-main.production.o
+_SLRCONA 3A43 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_SLRCONB 3A53 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_SLRCONC 3A63 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+___heap_hi 0 0 ABS 0 - /tmp/xcXLDnMPh.o
+___heap_lo 0 0 ABS 0 - /tmp/xcXLDnMPh.o
+___param_bank 0 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production/spi-test-master-main.production.o
+__end_of__initialization 127E 0 CODE 0 cinit dist/default/production/spi-test-master-main.production.o
+__Libigdata 0 0 CODE 0 ibigdata dist/default/production/spi-test-master-main.production.o
+__Lclrtext 0 0 ABS 0 clrtext dist/default/production/spi-test-master-main.production.o
+_SPI1CLK 3D1C 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_SPI1RXB 3D10 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_SPI1TXB 3D11 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__pcstackCOMRAM B 0 COMRAM 1 cstackCOMRAM dist/default/production/spi-test-master-main.production.o
+__end_of_main 12EE 0 CODE 0 text0 dist/default/production/spi-test-master-main.production.o
+_OSCEN 39DD 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_TRISA 3FC2 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_TRISB 3FC3 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+_TRISC 3FC4 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__HRAM 0 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__Hbss 0 0 RAM 1 bss dist/default/production/spi-test-master-main.production.o
+__Hram 0 0 ABS 0 ram dist/default/production/spi-test-master-main.production.o
+__Hsfr 0 0 ABS 0 sfr dist/default/production/spi-test-master-main.production.o
+__LRAM 1 0 ABS 0 - dist/default/production/spi-test-master-main.production.o
+__Lbss 0 0 RAM 1 bss dist/default/production/spi-test-master-main.production.o
+__Lram 0 0 ABS 0 ram dist/default/production/spi-test-master-main.production.o
+__Lsfr 0 0 ABS 0 sfr dist/default/production/spi-test-master-main.production.o
+__end_of_OSCILLATOR_Initialize 12DA 0 CODE 0 text5 dist/default/production/spi-test-master-main.production.o
+__initialization 1252 0 CODE 0 cinit dist/default/production/spi-test-master-main.production.o
+__end_of_MASTER0_open 1308 0 CODE 0 text8 dist/default/production/spi-test-master-main.production.o
+__pdataCOMRAM 6 0 COMRAM 1 dataCOMRAM dist/default/production/spi-test-master-main.production.o
+__Hfardata 0 0 FARRAM 0 fardata dist/default/production/spi-test-master-main.production.o
+__Hsmallconst 1020 0 SMALLCONST 0 smallconst dist/default/production/spi-test-master-main.production.o
+__Lifardata 0 0 CODE 0 ifardata dist/default/production/spi-test-master-main.production.o
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production/spi-test-master-main.production.o
+_OSCILLATOR_Initialize 12C2 0 CODE 0 text5 dist/default/production/spi-test-master-main.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+text9 0 1020 1020 2F3 1
+text10 0 1314 1314 8 1
+init 0 FFFC FFFC 4 1
+reset_vec 0 0 0 4 1
+smallconst 0 1000 1000 20 1
+bssCOMRAM 1 1 1 F 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES

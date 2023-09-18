@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=FSL_SPI_MASTER
+PROJECTNAME=spi-test-master-main
 
 # Active Configuration
 DEFAULTCONF=default

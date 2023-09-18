@@ -139,7 +139,6 @@ int main(void)
     PPS_Initialize();
     PORT_Initialize();
     SPI1_Initialize();
-    INTERRUPT_Initialize();
     SPI1CON0bits.EN = 1;
     while(1)
     {

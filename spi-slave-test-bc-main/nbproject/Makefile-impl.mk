@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=SPI_SLAVE_BARE_CODE
+PROJECTNAME=spi-slave-test-bc-main
 
 # Active Configuration
 DEFAULTCONF=default
