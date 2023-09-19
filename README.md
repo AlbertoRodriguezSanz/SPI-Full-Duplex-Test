@@ -3,7 +3,7 @@
 PIC firmware for performing a communication test between two PIC18F26K83 microcontrollers through the SPI communication protocol. The goal for this test is to exchange a total of 4 bytes uninterrupted, replicating the communication with the AksIM2 absolute encoder. If the received message matches an expected value the LED will be turned on. There are two implementations for the master device transfers.
 
 ## Setup
-A breadboard with two PIC18F26K83 microcontrollers connected through two MCP2561 CAN transceivers is used as a testbench. 
+A breadboard with two PIC18F26K83 microcontrollers, where the microcontroller labelled '1' operates as the master device and the microcontroller labelled '3' operates as the slave device, was used as a test bench.
 
 ![spi_tests_breadboard](https://github.com/AlbertoRodriguezSanz/SPI-Master-Full-Duplex-Test/assets/95371514/a0d98f81-4d93-49cf-9aa9-18eca84d109d)
 
