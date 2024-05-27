@@ -1,4 +1,4 @@
-# SPI-Master-Full-Duplex-Test
+# SPI-Full Duplex Test
 
 PIC firmware for performing a communication test between two PIC18F26K83 microcontrollers through the SPI communication protocol. The goal for this test is to exchange a total of 4 bytes uninterrupted, replicating the communication with the AksIM2 absolute encoder. If the received message matches an expected value the LED will be turned on. There are two implementations for the master device transfers.
 
